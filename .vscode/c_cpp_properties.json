@@ -1,0 +1,33 @@
+{
+  "version": 4,
+  "configurations": [
+    {
+      "name": "ch32v003",
+      "compilerPath": "/usr/bin/riscv64-unknown-elf-gcc",
+      "compilerArgs": ["-march=rv32ec", "-mabi=ilp32e", "-nostdlib"],
+      "cStandard": "gnu17",
+      "cppStandard": "gnu++17",
+      "intelliSenseMode": "linux-gcc-x64",
+      "includePath": [
+        "${workspaceFolder}/**",
+        "${workspaceFolder}/../ch32fun/ch32fun",
+        "${workspaceFolder}/../ch32fun/extralibs",
+        "/usr/lib/picolibc/riscv64-unknown-elf/include"
+      ],
+      "defines": [
+        "CH32V003=1",
+        "TARGET_MCU=CH32V003",
+        "MCU_PACKAGE=1",
+        "__riscv"
+      ],
+      "browse": {
+        "path": [
+          "${workspaceFolder}",
+          "${workspaceFolder}/../ch32fun/ch32fun",
+          "${workspaceFolder}/../ch32fun/extralibs"
+        ],
+        "limitSymbolsToIncludedHeaders": false
+      }
+    }
+  ]
+}
