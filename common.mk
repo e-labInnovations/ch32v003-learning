@@ -11,5 +11,8 @@ NEWLIB				?= /usr/include/picolibc/riscv64-unknown-elf/include
 TARGET_MCU		?= CH32V003
 
 # My CH549 SWIO probe, talkingthe ardulink protocol over USB-CDC.
+# Keep this overridable, for example: make PROGRAMMER_ARGS='-C winusb' flash
+PROGRAMMER_ARGS	?= -C ardulink -c /dev/ttyACM0
+
 # Use '=' (lazy), never ':=' (immediate)
 FLASH_COMMAND	= $(MINICHLINK)/minichlink $(PROGRAMMER_ARGS) -w $< flash -b
